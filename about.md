@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-                                                Jayavarshini Thirumalai B.Tech., (MSc)
+                                        Jayavarshini Thirumalai B.Tech., (MSc)
                                                                           - Junior Penetration Tester
 
 
