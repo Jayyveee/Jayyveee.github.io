@@ -1,9 +1,9 @@
 ---
-title: Yet Another Sample Page
+title: Metasploitable
 published: true
 ---
 
-Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
+Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`. `hello`
 
 [Link to another page](another-page).
 
