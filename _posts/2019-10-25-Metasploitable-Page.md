@@ -2,10 +2,25 @@
 title: Metasploitable
 published: true
 ---
+The following information shows the **Metasploitable walkthrough**
 
-Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`. `hello`
+## [](#header-2)Introduction
 
-[Link to another page](another-page).
+   Metasploitable is a Linux based operating system that is designed in a vulnerable way so that the pentesters and ethical hackers can test their skills. There is no security to the server hence it is always better to _run the metasploitable in a virtual environment_, as anyone can logon into it.
+  
+  ### [](#header-3)Requirements
+  
+   1. Download the vulnerable OS from the following link, **[https://sourceforge.net/projects/metasploitable/files/Metasploitable2/].**
+   2. Kali Linux can be downloaded from the link, **[https://www.kali.org/].**
+   3. Virtual Environment, here example is shown using VMware Workstation.
+   4. Good understanding of Metasploit Framework(MSF).
+   5. Linux commands usage.
+       Install both the Operating Systems and run it.
+      
+      _NOTE: Installation steps of Kali Linux can be found here,[Kali_linux_insatllation_guide]_
+  
+Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`. `hello` 
+
 
 There should be whitespace between paragraphs.
 
