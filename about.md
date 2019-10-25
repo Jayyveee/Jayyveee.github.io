@@ -11,57 +11,57 @@ title: About Me
 
                                                      E X P E R I E N C E 
   
-              Internship on  IT Maintenance and Security Approaches Followed in JK Tyres and Industries | AUGUST 2019    
+           Internship on  IT Maintenance and Security Approaches Followed in JK Tyres and Industries | AUGUST 2019    
                 
-              Training on Real Time Concepts of  Software and Networking Domain in HCL | MAY 2015
+           Training on Real Time Concepts of  Software and Networking Domain in HCL | MAY 2015
                 
                                                       F O R M A T I O N
    
-               MSc in Cyber Security | TalTech University, | Estonia | 09/2018 – Present
+            MSc in Cyber Security | TalTech University, | Estonia | 09/2018 – Present
       
-               B. Tech in Information Technology | SRM Valliammai Engineering College | India| 08/2014 – 05/2018               
+            B. Tech in Information Technology | SRM Valliammai Engineering College | India| 08/2014 – 05/2018               
                    
                    
                                                    C O M P E T E N C I E S
    
                          TECHNICAL SKILLS
-                                                    Ethical Hacking | CEH
+                                           Ethical Hacking | CEH
                                                        
-                                       Penetration Testing | Web App | Network | Android 
+                                           Penetration Testing | Web App | Network | Android 
                                                     
-                                          Malware Analysis | Windows | Mobile | Cloud
+                                           Malware Analysis | Windows | Mobile | Cloud
                                              
-                                                   Vulnerability Assessment
+                                           Vulnerability Assessment
                                                     
-                                                 Forensics | CHFI
+                                           Forensics | CHFI
                                                        
-                                                Blockchain | Ethereum App Developemnt
+                                           Blockchain | Ethereum App Developemnt
                                                    
-                                              Cryptography | Algorithms | Ciphers
+                                           Cryptography | Algorithms | Ciphers
                        
                           PROGRAMMING SKILLS
                                       
-                                        IDE : Visual Basic Code
+                                       IDE: Visual Basic Code
                          
-                                                     Python | Django | Web2Py | PenTesting
+                                            Python | Django | Web2Py | PenTesting
                               	                     
-                                                        PHP | Laravel 
+                                            PHP | Laravel 
                                         
-                                                   HTML/CSS | Bootstrap 
+                                            HTML/CSS | Bootstrap 
                                                           
-                                                         JS | jQuery 
+                                            JS | jQuery 
                                          
-                                                          C | C++ | C# | Go
+                                            C | C++ | C# | Go
                                                              
-                                                         DB | MySQL | MongoDB
+                                            DB | MySQL | MongoDB
 
 
                           CERTIFICATIONS
-                                           CCNA 1 and CCNA 2
+                                            CCNA 1 and CCNA 2
                                               
-                                           Certified Ethical Hacking | infySEC
+                                            Certified Ethical Hacking | infySEC
                                               
-                                           Programming in C | NIIT & Object Oriented Programming in C++ | NIIT
+                                            Programming in C | NIIT & Object Oriented Programming in C++ | NIIT
 
 
                              
