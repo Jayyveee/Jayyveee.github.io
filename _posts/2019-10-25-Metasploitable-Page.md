@@ -22,7 +22,7 @@ The following information shows the **Metasploitable walkthrough**
    When the OSes installed properly, one can encounter as shown in the following image,
    
 
-
+   # [](#header-1) image 
    
    
    Login into the metasploitable terminal, Username and password would be given(commonly, it is msfadmin)
@@ -33,7 +33,7 @@ The following information shows the **Metasploitable walkthrough**
         2. Vulnerability identification/Enumeration
         3. Exploitation and Access Gaining 
 
-**# [](#header-1) Network Penetration Testing**
+# [](#header-1) Network Penetration Testing
 
 # [](#header-1)Step 1: Scanning 
    
@@ -47,7 +47,9 @@ The following information shows the **Metasploitable walkthrough**
             
       The results can be similar to the following image,
       
-      ![](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
+      # [](#header-1) image 
+         
+        ![](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
 
 
 
@@ -55,7 +57,7 @@ The following information shows the **Metasploitable walkthrough**
 
 nmap -Pn --script vuln 192.168.1.105
 
-
+   BOOM!!!!!!!!
 
 # [](#header-1)Step 1: Exploitation and Acess Gaining
 
