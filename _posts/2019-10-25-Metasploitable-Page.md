@@ -8,7 +8,7 @@ The following information shows the **Metasploitable walkthrough**
 
    Metasploitable is a Linux based operating system that is designed in a vulnerable way so that the pen-testers and ethical hackers can test their skills. There is no security to the server hence it is always better to _run the metasploitable in a virtual environment_, as anyone can logon into it.
   
-  ### [](#header-3)Requirements
+### [](#header-3)Requirements
   
    1. Download the vulnerable OS from the following link, **[metaploitable_download_link](https://sourceforge.net/projects/metasploitable/files/Metasploitable2/).**
    2. Kali Linux can be downloaded from the link, **[Kali_Linux_download_link](https://www.kali.org/).**
@@ -22,7 +22,7 @@ The following information shows the **Metasploitable walkthrough**
    When the OSes installed properly, one can encounter as shown in the following image,
    
 
-   # [](#header-1) image 
+# [](#header-1) image 
    
    
    Login into the metasploitable terminal, Username and password would be given(commonly, it is msfadmin)
@@ -41,9 +41,9 @@ The following information shows the **Metasploitable walkthrough**
 
    * Open a terminal in Kali Linux and use **_namp_"** to perform the Network Scanning
    * Enter the following command, `# nmap -sS -Pn -n ip_address`
-            - by default NMAP scans upto 1000 ports, to scan all the ports use either `-p`- or `-p 1-65535`
-            - the above command offers the TCP SYN scan, to scan the UDP ports use `-sU`
-            - the command also skips the host discovery(no Ping) and DNS resolution
+     - by default NMAP scans upto 1000 ports, to scan all the ports use either `-p`- or `-p 1-65535`
+     - the above command offers the TCP SYN scan, to scan the UDP ports use `-sU`
+     - the command also skips the host discovery(no Ping) and DNS resolution
             
       The results can be similar to the following image,
       
