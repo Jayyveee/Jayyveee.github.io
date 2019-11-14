@@ -30,7 +30,9 @@ The following information shows the **Metasploitable walkthrough**
    Get the IP address, `# ifconfig`
    Use that IP_address and perform the following steps: 
         1. Scanning
+        
         2. Vulnerability identification/Enumeration
+        
         3. Exploitation and Access Gaining 
 
 # [](#header-1) Network Penetration Testing
