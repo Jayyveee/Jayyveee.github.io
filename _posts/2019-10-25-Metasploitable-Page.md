@@ -140,6 +140,3 @@ nmap -Pn --script vuln 192.168.1.105
 				// now you will have the smb shell access, try #cd rootfs #cd etc and #more passwd
 
 
-```
-The final element.
-```
